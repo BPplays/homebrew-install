@@ -174,16 +174,16 @@ else
   # HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
 
 
-  if [ -n "$XDG_CACHE_HOME" ]; then
-      cache_dir="$XDG_CACHE_HOME"
-  else
-      cache_dir="$HOME/.cache"
-  fi
+  # if [ -n "$XDG_CACHE_HOME" ]; then
+  #     cache_dir="$XDG_CACHE_HOME"
+  # else
+  #     cache_dir="$HOME/.cache"
+  # fi
 
 
   HOMEBREW_PREFIX="/opt/linuxbrew"
   HOMEBREW_REPOSITORY="${HOMEBREW_PREFIX}/Homebrew"
-  HOMEBREW_CACHE="${cache_dir}/Homebrew"
+  HOMEBREW_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/homebrew"
 
   STAT_PRINTF=("stat" "--printf")
   PERMISSION_FORMAT="%a"
