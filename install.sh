@@ -181,7 +181,7 @@ else
   fi
 
 
-  HOMEBREW_PREFIX="/opt/homebrew"
+  HOMEBREW_PREFIX="/opt/linuxbrew"
   HOMEBREW_REPOSITORY="${HOMEBREW_PREFIX}/Homebrew"
   HOMEBREW_CACHE="${cache_dir}/Homebrew"
 
