@@ -171,9 +171,19 @@ else
   UNAME_MACHINE="$(uname -m)"
 
   # On Linux, this script installs to /home/linuxbrew/.linuxbrew only
-  HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
+  # HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
+
+
+  if [ -n "$XDG_CACHE_HOME" ]; then
+      cache_dir="$XDG_CACHE_HOME"
+  else
+      cache_dir="$HOME/.cache"
+  fi
+
+
+  HOMEBREW_PREFIX="/opt/homebrew"
   HOMEBREW_REPOSITORY="${HOMEBREW_PREFIX}/Homebrew"
-  HOMEBREW_CACHE="${HOME}/.cache/Homebrew"
+  HOMEBREW_CACHE="${cache_dir}/Homebrew"
 
   STAT_PRINTF=("stat" "--printf")
   PERMISSION_FORMAT="%a"
