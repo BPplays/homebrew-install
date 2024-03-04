@@ -67,7 +67,7 @@ un="$(uname)"
 case "${un}" in
   Linux)
     ostype=linux
-    homebrew_prefix_default=/home/linuxbrew/.linuxbrew
+    homebrew_prefix_default=/opt/homebrew
     ;;
   Darwin)
     ostype=macos
